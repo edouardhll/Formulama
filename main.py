@@ -450,7 +450,7 @@ c.acroForm.checkbox(
     fillColor=whitesmoke
 )
 
-homme_valeur = (data.get('homme', 'false').lower() == 'homme')
+homme_valeur = (data.get('sexe', 'false').lower() == 'homme')
 c.acroForm.checkbox(
     name="homme",
     x=225.95,
@@ -460,7 +460,7 @@ c.acroForm.checkbox(
     fillColor=whitesmoke
 )
 
-femme_valeur = (data.get('femme', 'false').lower() == 'true')
+femme_valeur = (data.get('sexe', 'false').lower() == 'femme')
 c.acroForm.checkbox(
     name="femme",
     x=305.95,

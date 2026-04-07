@@ -32,7 +32,7 @@
 <!-- RAJOUTER LE GENRE AVEC BALISE OPTION -->
     <div class="champFormulaire">
         <label>Civilité</label>
-        <select class="champFormulaire" id="homme" name="homme">
+        <select class="champFormulaire" id="sexe" name="sexe">
             <option value="" disabled selected>Sélectionner</option>
             <option>Homme</option>
             <option>Femme</option>
@@ -123,7 +123,7 @@
 
     <div class="champFormulaire">
         <label>Date de perte</label>
-        <input id="datePerte" type="date" name="datePerte"
+        <input id="datePerte" type="date" name="datePerte">
     </div>
 
     <div class="champFormulaire">
