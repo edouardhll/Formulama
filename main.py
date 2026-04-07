@@ -1,11 +1,7 @@
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.colors import whitesmoke
-from datetime import datetime
-from time import strftime
 import json
-
-DATE = str(datetime.now().strftime("%d-%m-%Y"))
 
 c = canvas.Canvas("cerfa_14011-02.pdf", pagesize=A4) #créer l'objet canvas avec son nom et sa taille
 
@@ -338,7 +334,7 @@ else:
         name='delivrePar',
         x=330,
         y=280,
-        width=150,
+        width=200,
         height=17,
         value=delivrePar_valeur,
         borderStyle='underlined',
@@ -413,13 +409,14 @@ c.acroForm.textfield(
     fillColor=whitesmoke
 )
 
+date_valeur = data.get('date', '')
 c.acroForm.textfield(
-    name="aujourdhui",
+    name="date",
     x=280,
     y=133,
     width=100,
     height=17,
-    value=DATE,
+    value=date_valeur,
     borderStyle='underlined',
     forceBorder=True,
     fillColor=whitesmoke
