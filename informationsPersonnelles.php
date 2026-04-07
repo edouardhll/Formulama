@@ -8,7 +8,7 @@ function diffDate($a, $b) {
     return $interval;
 }
 
-echo "<pre>";
+//echo "<pre>";
 
 $dataToJSON = $_POST;
 $dataToJSON['date'] = date('d/m/Y');
@@ -27,10 +27,15 @@ if ($age > 17)
             $dataToJSON['majeur'] = "False";
             }
             
-print_r($dataToJSON);
+//print_r($dataToJSON);
 $BDD = json_encode($dataToJSON);
-echo "</pre>";
+//echo "</pre>";
             
 $fichier = fopen('bdd.json', 'w');
 fwrite($fichier, $BDD);
+
+exec('C:/Users/edoua_itw4d03/AppData/Local/Python/bin/python3.exe '.__DIR__.'/main.py');
+header('Content-Type: application/pdf');
+header('Content-Disposition: inline; filename="cerfa_14011-02.pdf"');
+readfile(__DIR__."/cerfa_14011-02.pdf");
 ?>

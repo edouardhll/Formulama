@@ -6,7 +6,6 @@
 <body>
     <form action="informationsPersonnelles.php" method="post">
 
-
 <!-- déclarant -->
 
     <div class="champFormulaire">
