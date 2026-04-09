@@ -26,11 +26,11 @@ if ($age > 17)
         else {
             $dataToJSON['majeur'] = "False";
             }
-            
+
 //print_r($dataToJSON);
 $BDD = json_encode($dataToJSON);
 //echo "</pre>";
-            
+
 $fichier = fopen('bdd.json', 'w');
 fwrite($fichier, $BDD);
 
